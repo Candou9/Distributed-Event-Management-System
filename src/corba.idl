@@ -1,0 +1,15 @@
+module corba {
+   
+	interface AddItemInterface{
+	
+	oneway void shutdown();
+	
+	long swapEvent(in string customerID,in string newEventID,in string newEventType,in string oldEventID,in string oldEventType); 
+    boolean addEvent(in string managerID,in string eventID, in string eventType, in long eventQty);
+	boolean removeEvent(in string managerID,in string eventID, in string eventType);
+	string listEventAvailability(in string managerID,in string eventType);
+	boolean bookEvent(in string customerID, in string eventID, in string eventType, in long numberOfDays);
+	boolean cancelEvent(in string customerID, in string eventType, in string eventID); 
+    string getBookingSchedule(in string customerID);
+	};
+};
